@@ -1,0 +1,58 @@
+{
+  "tasks": [
+    {
+      "id": "jari-screens-001",
+      "name": "screens-implementation",
+      "agent": "frontend",
+      "specFile": "screens-implementation.md",
+      "status": "in-progress",
+      "createdAt": "2026-05-04T12:00:00.000Z",
+      "startedAt": "2026-05-04T15:44:59.207Z",
+      "completedAt": null,
+      "conversationId": "91785e3e3240426b8f46a22716b9f7df",
+      "modelUsed": "google/gemini-2.5-pro-exp-03-25",
+      "openhandsUrl": "https://coder.shopsub.in/conversations/91785e3e3240426b8f46a22716b9f7df",
+      "error": null,
+      "modelTier": "free",
+      "freeModelIdx": 1,
+      "paidModelIdx": 0,
+      "usedPaidModel": false
+    },
+    {
+      "id": "jari-checkout-auth-001",
+      "name": "checkout-auth-implementation",
+      "agent": "frontend",
+      "specFile": "checkout-auth-implementation.md",
+      "status": "in-progress",
+      "createdAt": "2026-05-04T12:00:00.000Z",
+      "startedAt": "2026-05-04T15:44:59.305Z",
+      "completedAt": null,
+      "conversationId": "a97e6398a1ed48e49038b60dea0f6243",
+      "modelUsed": "google/gemini-2.5-pro-exp-03-25",
+      "openhandsUrl": "https://coder.shopsub.in/conversations/a97e6398a1ed48e49038b60dea0f6243",
+      "error": null,
+      "modelTier": "free",
+      "freeModelIdx": 1,
+      "paidModelIdx": 0,
+      "usedPaidModel": false
+    },
+    {
+      "id": "jari-build-setup-001",
+      "name": "build-setup",
+      "agent": "devops",
+      "specFile": "build-setup.md",
+      "status": "in-progress",
+      "createdAt": "2026-05-04T12:00:00.000Z",
+      "startedAt": "2026-05-04T15:50:02.632Z",
+      "completedAt": null,
+      "conversationId": "e7887c6521e2443e84114f4dbcd5122e",
+      "modelUsed": "google/gemini-2.5-pro-exp-03-25",
+      "openhandsUrl": "https://coder.shopsub.in/conversations/e7887c6521e2443e84114f4dbcd5122e",
+      "error": null,
+      "modelTier": "free",
+      "freeModelIdx": 1,
+      "paidModelIdx": 0,
+      "usedPaidModel": false
+    }
+  ]
+}

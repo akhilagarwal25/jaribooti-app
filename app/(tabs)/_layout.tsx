@@ -1,6 +1,8 @@
 import { Tabs } from 'expo-router'
 import { useAppTheme } from '@/context/ThemeContext'
 import { Home, Grid, ShoppingCart, User } from 'lucide-react-native'
+import { View, Text } from 'react-native'
+import { useCart } from '@/hooks/useCart'
 
 function TabBarIcon({ name, color, size }: { name: 'home'|'catalog'|'cart'|'account'; color: string; size: number }) {
   switch (name) {
@@ -9,6 +11,32 @@ function TabBarIcon({ name, color, size }: { name: 'home'|'catalog'|'cart'|'acco
     case 'cart': return <ShoppingCart size={size} color={color} />
     case 'account': return <User size={size} color={color} />
   }
+}
+
+function CartBadge() {
+  const { lineCount } = useCart()
+  const { colors } = useAppTheme()
+
+  if (lineCount === 0) return null
+
+  return (
+    <View style={{
+      position: 'absolute',
+      top: -4,
+      right: -8,
+      backgroundColor: colors.error,
+      borderRadius: 10,
+      minWidth: 18,
+      height: 18,
+      justifyContent: 'center',
+      alignItems: 'center',
+      paddingHorizontal: 4,
+    }}>
+      <Text style={{ color: '#fff', fontSize: 11, fontWeight: '700' }}>
+        {lineCount > 99 ? '99+' : lineCount}
+      </Text>
+    </View>
+  )
 }
 
 export default function TabLayout() {
@@ -51,7 +79,12 @@ export default function TabLayout() {
         name="cart"
         options={{
           title: 'Cart',
-          tabBarIcon: ({ color, size }) => <TabBarIcon name="cart" color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => (
+            <View>
+              <TabBarIcon name="cart" color={color} size={size} />
+              <CartBadge />
+            </View>
+          ),
         }}
       />
       <Tabs.Screen
