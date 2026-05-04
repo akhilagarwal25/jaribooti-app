@@ -9,19 +9,38 @@
       "package": "com.jaribooti.app",
       "adaptiveIcon": {
         "backgroundColor": "#1a472a"
-      }
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED"
+      ],
+      "useNextNotificationsApi": true
     },
     "ios": {
-      "bundleIdentifier": "com.jaribooti.app"
+      "bundleIdentifier": "com.jaribooti.app",
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": ["remote-notification"]
+      }
     },
     "plugins": [
       "expo-router",
-      "expo-font"
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "color": "#1a472a"
+        }
+      ]
     ],
     "extra": {
       "eas": {
         "projectId": "jaribooti-app"
       }
-    }
+    },
+    "newArchEnabled": true
   }
 }
