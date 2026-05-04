@@ -8,7 +8,7 @@ import { useAuth } from '@/hooks/useAuth'
 import { useCart } from '@/hooks/useCart'
 import {
   User, Mail, Phone, ShoppingBag, LogOut,
-  ChevronRight, Package, Settings, Heart
+  ChevronRight, Package, Settings
 } from 'lucide-react-native'
 
 function MenuItem({
@@ -126,7 +126,7 @@ export default function AccountScreen() {
                   onPress={() => Alert.alert('Coming Soon', 'Order history will be available soon.')}
                 />
                 <MenuItem
-                  icon={Heart}
+                  icon={ShoppingBag}
                   title="Wishlist"
                   subtitle="Your saved products"
                   onPress={() => Alert.alert('Coming Soon', 'Wishlist will be available soon.')}

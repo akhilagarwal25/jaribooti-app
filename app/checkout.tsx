@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator } from 'rea
 import { WebView } from 'react-native-webview'
 import { useAppTheme } from '@/context/ThemeContext'
 import { useCart } from '@/hooks/useCart'
-import { ChevronLeft, AlertCircle, RefreshCw } from 'lucide-react-native'
+import { ChevronLeft, AlertCircle, Loader2 } from 'lucide-react-native'
 
 export default function CheckoutScreen() {
   const { colors } = useAppTheme()
@@ -97,7 +97,7 @@ export default function CheckoutScreen() {
               style={[styles.actionBtn, { backgroundColor: colors.primary }]}
               onPress={handleRetry}
             >
-              <RefreshCw size={18} color="#fff" />
+              <Loader2 size={18} color="#fff" />
               <Text style={styles.actionBtnText}>Try Again</Text>
             </TouchableOpacity>
             <TouchableOpacity

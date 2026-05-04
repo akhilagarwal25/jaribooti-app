@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Stack, useRouter } from 'expo-router'
+import { useLocalSearchParams } from 'expo-router'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import { useAppTheme } from '@/context/ThemeContext'
 import { useCart } from '@/hooks/useCart'
@@ -9,6 +10,7 @@ export default function OrderConfirmationScreen() {
   const { colors } = useAppTheme()
   const router = useRouter()
   const { clearCart } = useCart()
+  const { number: orderNumber } = useLocalSearchParams<{ number: string }>()
 
   // Clear cart on mount
   useEffect(() => {

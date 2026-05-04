@@ -9,8 +9,8 @@ export interface ProductImage {
 export interface ProductVariant {
   id: string
   title: string
-  price: string
-  compareAtPrice: string | null
+  price: { amount: string; currencyCode: string }
+  compareAtPrice: { amount: string; currencyCode: string } | null
   availableForSale: boolean
   sku: string
   selectedOptions: { name: string; value: string }[]

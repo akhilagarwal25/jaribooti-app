@@ -1,4 +1,4 @@
-import { View, ActivityIndicator } from 'react-native'
+import { View, ActivityIndicator, StyleSheet } from 'react-native'
 import { useAppTheme } from '@/context/ThemeContext'
 
 export function LoadingSpinner() {
@@ -18,12 +18,10 @@ export function Shimmer({ width = '100%', height = 180, radius = 12 }: {
   const { colors } = useAppTheme()
   return (
     <View
-      style={{
-        width,
-        height,
-        borderRadius: radius,
-        backgroundColor: colors.cardDark,
-      }}
+      style={StyleSheet.flatten([
+        { height, borderRadius: radius, backgroundColor: colors.cardDark },
+        width as any
+      ])}
     />
   )
 }

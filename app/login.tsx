@@ -6,7 +6,7 @@ import {
 } from 'react-native'
 import { useAppTheme } from '@/context/ThemeContext'
 import { useAuth } from '@/hooks/useAuth'
-import { ChevronLeft, Mail, Smartphone, Chrome as GoogleIcon } from 'lucide-react-native'
+import { ChevronLeft, Mail, Phone, Globe as GoogleIcon } from 'lucide-react-native'
 
 type TabType = 'email' | 'google' | 'phone'
 
@@ -92,7 +92,7 @@ export default function LoginScreen() {
           <View style={styles.tabs}>
             <TabButton type="email" icon={Mail} label="Email" />
             <TabButton type="google" icon={GoogleIcon} label="Google" />
-            <TabButton type="phone" icon={Smartphone} label="Phone" />
+            <TabButton type="phone" icon={Phone} label="Phone" />
           </View>
 
           {/* Error Message */}
