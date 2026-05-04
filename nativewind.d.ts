@@ -1,4 +1,1 @@
-import 'nativewind';
-declare module 'nativewind' {
-  interface_elements<T> {}
-}
+// Type declarations for NativeWind v4
