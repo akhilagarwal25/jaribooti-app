@@ -1,0 +1,26 @@
+<h2>Customer login</h2>
+<p class="subtitle">How should customers sign in?</p>
+
+<div class="options">
+  <div class="option" data-choice="shopify-guest" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Guest (no login needed)</h3>
+      <p>No account needed. Browse, add to cart, checkout as guest. Shopify captures email/phone at checkout. Simpler for one-time buyers.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="shopify-auth" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Shopify account login</h3>
+      <p>Customers create account via Shopify. Login with email/password or OTP. Access order history, saved addresses, wishlist.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="google-phone" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Google + Phone OTP</h3>
+      <p>Login with Google OAuth or phone OTP (like Andha Pansari app). No password needed. Faster, familiar pattern.</p>
+    </div>
+  </div>
+</div>

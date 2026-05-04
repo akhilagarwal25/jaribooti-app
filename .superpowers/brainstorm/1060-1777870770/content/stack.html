@@ -1,0 +1,19 @@
+<h2>Backend architecture</h2>
+<p class="subtitle">Jaribooti uses Shopify. But we still need a small backend for login/auth and cart.</p>
+
+<div class="options">
+  <div class="option" data-choice="shopify-only" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Shopify-only (Recommended)</h3>
+      <p>No separate backend. App talks directly to Shopify Storefront API for products, cart, checkout. A thin wrapper if needed. Simplest architecture.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="django-backend" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Django backend (like Andha Pansari)</h3>
+      <p>Separate Django app on your VPS. Shopify handles products/checkout. Django handles auth, cart sync, notifications, order webhooks, analytics.</p>
+    </div>
+  </div>
+</div>

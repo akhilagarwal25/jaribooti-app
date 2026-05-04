@@ -1,0 +1,42 @@
+<h2>Architecture</h2>
+
+<div class="mockup">
+  <div class="mockup-header">Data flow</div>
+  <div class="mockup-body" style="font-family: monospace; font-size: 13px; line-height: 1.8;">
+    <div style="text-align: center;">
+      <div style="display: inline-block; border: 2px solid #059669; border-radius: 8px; padding: 8px 16px; background: #d1fae5; margin: 8px;">Expo App<br><small>Android / iOS</small></div>
+      <br>↕ Storefront API<br>
+      <div style="display: inline-block; border: 2px solid #059669; border-radius: 8px; padding: 8px 16px; background: #d1fae5; margin: 8px;">Shopify Storefront API<br><small>Products, Collections, Cart, Checkout</small></div>
+      <br>↓
+      <div style="display: inline-block; border: 2px solid #059669; border-radius: 8px; padding: 8px 16px; background: #d1fae5; margin: 8px;">Shopify Checkout (WebView)<br><small>Payment, Addresses, Order Confirmation</small></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Tech stack</h3>
+  <ul>
+    <li><strong>Expo SDK 54</strong> + expo-router v6 + NativeWind v4 (same as Andha Pansari app)</li>
+    <li><strong>Shopify Storefront API</strong> — products, collections, cart, checkout URL</li>
+    <li><strong>Shopify Checkout</strong> — WebView with postMessage bridge for order confirmation</li>
+    <li><strong>Auth</strong> — Shopify customer account + Google OAuth + Phone OTP</li>
+    <li><strong>Green botanical theme</strong> — matching jaribooti.com branding</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>Key screens</h3>
+  <ul>
+    <li><strong>Home</strong> — hero banner, featured products, collections</li>
+    <li><strong>Catalog / Collections</strong> — browse by category</li>
+    <li><strong>Product detail</strong> — images, description, variants, add to cart</li>
+    <li><strong>Search</strong> — product search with filters</li>
+    <li><strong>Cart</strong> — line items, quantity, proceed to checkout</li>
+    <li><strong>Checkout</strong> — WebView to Shopify hosted checkout</li>
+    <li><strong>Order confirmation</strong> — postMessage from WebView, show success</li>
+    <li><strong>Account</strong> — login/register, order history, saved addresses</li>
+    <li><strong>Profile</strong> — edit details, logout</li>
+  </ul>
+</div>
+
+<p class="subtitle">Looks right so far?</p>

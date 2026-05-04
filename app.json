@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Jaribooti",
+    "slug": "jaribooti-app",
+    "version": "1.0.0",
+    "scheme": "jaribooti",
+    "platforms": ["android", "ios"],
+    "android": {
+      "package": "com.jaribooti.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#1a472a"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.jaribooti.app"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "jaribooti-app"
+      }
+    }
+  }
+}

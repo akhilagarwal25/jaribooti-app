@@ -1,0 +1,19 @@
+<h2>Checkout approach</h2>
+<p class="subtitle">How should customers pay?</p>
+
+<div class="options">
+  <div class="option" data-choice="shopify-checkout" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Shopify checkout (Recommended)</h3>
+      <p>App shows products + cart. On checkout, open Shopify's hosted checkout page in a WebView or browser. Handles payment, addresses, order confirmation. Simpler to build, Shopify manages payments.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="native-checkout" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Native in-app checkout</h3>
+      <p>Full custom checkout within the app. Integrates Razorpay/UPI/cards directly. More complex to build but smoother UX and works without Shopify's hosted page.</p>
+    </div>
+  </div>
+</div>
